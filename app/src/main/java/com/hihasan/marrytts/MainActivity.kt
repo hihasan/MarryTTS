@@ -39,11 +39,16 @@ class MainActivity : AppCompatActivity()
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
+        speak.setOnClickListener(){
+            Toast.makeText(this,"This is Button Press",Toast.LENGTH_SHORT).show()
             val text = editTtsText.text.toString().trim()
             if (!text.isEmpty()){
                 MaryLink.getInstance().startTTS(text)
             }
+        }
+
+        fab.setOnClickListener { view ->
+
         }
 
 
